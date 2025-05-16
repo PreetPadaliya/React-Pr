@@ -1,26 +1,27 @@
-import { useState } from 'react'
-import './App.css';
-import Navbar from './components/Navbar';
-import Button from './components/Button';
-import Banner from './components/Banner';
-import About from './components/About';
-import Conditions from './components/Conditions';
-import Events from './components/Events';
-import Lists from './components/Lists';
+import { useState } from "react";
+import "./App.css";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Layout from "./pages/Layout";
+import Home from "./pages/Home";
+import Contact from "./pages/Contact";
+import AboutUs from "./pages/AboutUs";
+import NoPage from "./pages/NoPage";
 
 function App() {
-
   return (
-    <>  
-        <div className='container'>
-          <Navbar />
-          <Banner />  
-          <About />
-          <Conditions />
-          <Events/>
-          <Lists />
-        </div>  
+    <>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Layout />}>
+            <Route index element={<Home />} />
+            <Route path="contact" element={<Contact />} />
+            <Route path="about" element={<AboutUs />} />
+            <Route path="home" element={<Home />} />
+            <Route path="*" element={<NoPage />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
     </>
-  )
+  );
 }
 export default App;

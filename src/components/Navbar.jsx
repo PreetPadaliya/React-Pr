@@ -3,6 +3,7 @@ import Button from './Button';
 
 function Navbar() {
     return (
+      <div>
         <nav className="navbar navbar-expand-lg bg-body-tertiary ">
   <div className="container-fluid ok">
     <a className="navbar-brand" href="#"><b>ADMINO</b></a>
@@ -26,6 +27,7 @@ function Navbar() {
 </div>
 </div>
 </nav>
+</div>
     );
 }
 export default Navbar;

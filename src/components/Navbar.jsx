@@ -1,8 +1,9 @@
 import React from "react";
 import Button from "./Button";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 function Navbar() {
+  const navigate = useNavigate();
   return (
     <div>
       <nav className="navbar navbar-expand-lg bg-body-tertiary ">
@@ -40,7 +41,7 @@ function Navbar() {
               </li>
             </ul>
             <Button title="Login" />
-            <Button title="Signup" />
+            <Button title="Signup" onClick={() => navigate("/signup")} />
           </div>
         </div>
       </nav>

@@ -1,51 +1,87 @@
-import React from "react";
+import React, { useState } from "react";
 import Button from "./Button";
 import { Link, useNavigate } from "react-router-dom";
 
 function Navbar() {
   const navigate = useNavigate();
+
   return (
     <div>
-      <nav className="navbar navbar-expand-lg bg-body-tertiary ">
-        <div className="container-fluid ok">
-          <a className="navbar-brand" to="#">
-            <b>ADMINO</b>
-          </a>
-          <button
-            className="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarText"
-            aria-controls="navbarText"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
+      <nav className="px-4 py-0 shadow-lg bg-slate-100">
+        <div className="container flex items-center justify-between mx-auto">
+          <Link className="text-xl font-bold" to="#">
+            ADMINO
+          </Link>
+
+          <div
+            className={`"block md:flex md:items-center md:w-auto w-full md:flex-grow md:justify-center`}
           >
-            <span className="navbar-toggler-icon"></span>
-          </button>
-          <div className="collapse navbar-collapse" id="navbarText">
-            <ul className="navbar-nav mx-auto mb-2 mb-lg-0">
-              <li className="nav-item">
-                <Link className="nav-link active" aria-current="page" to="home">
+            <ul className="mt-4 md:flex md:space-x-8 md:mt-0">
+              <li>
+                <Link
+                  className="block py-2 font-medium text-gray-900 md:py-0 hover:text-blue-600"
+                  aria-current="page"
+                  to="home"
+                >
                   Home
                 </Link>
               </li>
-              <li className="nav-item">
-                <Link className="nav-link" to="about">
+              <li>
+                <Link
+                  className="block py-2 text-gray-700 md:py-0 hover:text-blue-600"
+                  to="about"
+                >
                   About
                 </Link>
               </li>
-              <li className="nav-item">
-                <Link className="nav-link" to="contact">
+
+
+
+
+              <li>
+                <Link
+                  className="block py-2 text-gray-700 md:py-0 hover:text-blue-600"
+                  to="products"
+                >
+                  Products
+                </Link>
+              </li>
+
+
+
+              <li>
+                <Link
+                  className="block py-2 text-gray-700 md:py-0 hover:text-blue-600"
+                  to="contact"
+                >
                   Contact
                 </Link>
               </li>
             </ul>
-            <Button title="Login" />
-            <Button title="Signup" onClick={() => navigate("/signup")} />
           </div>
+          <div className="hidden space-x-3 md:flex md:items-center">
+            <Link to="/signup">
+              <Button title="Signup" />
+            </Link>
+            <Link to="/login">
+              <Button title="Login" />
+            </Link>
+
+          </div>
+        </div>
+
+
+        <div className="flex flex-col pb-4 mt-4 space-y-2 md:hidden">
+          <Link to="/login">
+            <Button title="Login" />
+          </Link>
+          <Link to="/signup">
+            <Button title="Signup" />
+          </Link>
         </div>
       </nav>
     </div>
   );
 }
+
 export default Navbar;

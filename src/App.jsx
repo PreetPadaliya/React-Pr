@@ -3,11 +3,15 @@ import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Layout from "./pages/Layout";
 import Home from "./pages/Home";
+import Products from "./pages/Products";
 import Contact from "./pages/Contact";
 import AboutUs from "./pages/AboutUs";
 import NoPage from "./pages/NoPage";
 import Signup from "./pages/Signup";
+import Login from "./pages/Login";
 import { useNavigate } from "react-router-dom";
+import "bootstrap/dist/css/bootstrap.min.css";
+
 
 function App() {
   return (
@@ -18,9 +22,11 @@ function App() {
             <Route index element={<Home />} />
             <Route path="contact" element={<Contact />} />
             <Route path="about" element={<AboutUs />} />
+            <Route path="products" element={<Products />} />
             <Route path="home" element={<Home />} />
             <Route path="*" element={<NoPage />} />
             <Route path="/signup" element={<Signup />} />
+            <Route path="/login" element={<Login />} />
           </Route>
         </Routes>
       </BrowserRouter>

@@ -11,6 +11,7 @@ import Signup from "./pages/Signup";
 import Login from "./pages/Login";
 import { useNavigate } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
+import ApiFetch from "./components/ApiFetch";
 
 
 function App() {
@@ -22,7 +23,7 @@ function App() {
             <Route index element={<Home />} />
             <Route path="contact" element={<Contact />} />
             <Route path="about" element={<AboutUs />} />
-            <Route path="products" element={<Products />} />
+            <Route path="products" element={<ApiFetch />} />
             <Route path="home" element={<Home />} />
             <Route path="*" element={<NoPage />} />
             <Route path="/signup" element={<Signup />} />

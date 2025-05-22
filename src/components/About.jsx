@@ -20,9 +20,9 @@ function About() {
                     <img src="https://bootstrapmade.com/content/demo/Invent/assets/img/about/about-portrait-1.webp" alt="" className="p-3 mb-5 img-fluid w-50 w-md-25" />
 
                     <img src="https://bootstrapmade.com/content/demo/Invent/assets/img/about/about-8.webp" alt=""
-                        className="p-3 mb-0 img-fluid w-50 w-md-25" style={{ marginTop: "-160px" }} />
+                        className="p-3 mb-0 img-fluid w-50 w-md-25" style={{ marginTop: "-425px", marginLeft: "273px" }} />
                     <img src="https://bootstrapmade.com/content/demo/Invent/assets/img/about/about-12.webp" alt=""
-                        className="p-3 mb-9 img-fluid w-50 w-md-25" style={{ marginLeft: "273px", marginTop: "-210px" }} />
+                        className="p-3 mb-9 img-fluid w-50 w-md-25" style={{ marginLeft: "273px", marginTop: "-20xpx" }} />
                 </div>
             </div>
         </div>

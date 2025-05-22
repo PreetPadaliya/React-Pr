@@ -1,6 +1,8 @@
 import React from 'react'
 import { useState } from 'react'
 import { useEffect } from 'react'
+import { Link } from "react-router-dom";
+
 
 const ApiFetch = () => {
     const [products, setProducts] = useState([])
@@ -22,6 +24,7 @@ const ApiFetch = () => {
                             <>
                                 <div className="col-lg-3">
                                     <div className="card">
+                                        <h1>{product.id}</h1>
                                         <img src={product.images} className="card-img-top" alt="..." style={{ height: "200px", width: "200px" }} />
                                         <div className="card-body">
                                             <small>Brand: {product.brand}</small>
@@ -29,16 +32,17 @@ const ApiFetch = () => {
                                             <p className="card-text">{product.description}</p>
                                             <p>Category: {product.category}</p>
                                             <b>Price: ${product.price}</b> <br />
-                                            <a href="#" className="btn btn-primary">Add to cart</a>
+                                            <a href="#" className="ml-0 btn btn-primary me-1">Add to cart</a>
+                                            <Link to={`/product/${product.id}`} className="btn btn-danger">View Details </Link>
                                         </div>
                                     </div>
-                                </div>
+                                </div >
                             </>
                         )
                     })
                 }
             </div>
-        </div>
+        </div >
     )
 }
 
